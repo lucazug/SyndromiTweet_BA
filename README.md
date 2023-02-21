@@ -6,7 +6,7 @@
 
 #### main /
   - funcs.py (Relevant background functions)
-  - keyword_selec.py (Preprocessing list of symptoms into search query and pulling tweets through the Twitter API
+  - keyword_selec.py (Preprocessing list of symptoms into search query and pulling tweets through the Twitter API)
   - keyword_selec_model.py (Analysing manually labelled tweets and return significant keywords and "foundwords")
   - pull_tweets.py (Main API call to pull main Twitter data)
   - to_manual_coding.py (Randomly select main Twitter data for labelling.)
