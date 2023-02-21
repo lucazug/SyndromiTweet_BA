@@ -4,7 +4,7 @@
 
 ## Python Files
 
-#### Code & Data /
+#### main /
   - funcs.py (Relevant background functions)
   - keyword_selec.py (Preprocessing list of symptoms into search query and pulling tweets through the Twitter API
   - keyword_selec_model.py (Analysing manually labelled tweets and return significant keywords and "foundwords")
@@ -16,7 +16,7 @@
 
 ## Data
 
-#### Code & Data /
+#### main /
   - Symptome.csv (List of symptoms used in keyword_selec.py)
   - Influenza_RKI.csv (RKI data on infections used in evaluation.py)
   - Significant_Keywords.csv (List of keywords for Twitter search query out of keyword_selec_model.py into pull_tweets.py)
@@ -26,20 +26,18 @@
   - inputs_valid_embeddings.pbz2    ** Word embeddings for validation data
   - inputs_test_embeddings.pbz2     ** Word embeddings for test data
 
-#### Code & Data /
-  - twitter_data /
-      - Twitter_main_final_fixed.csv
-      - Twitter_pertubation_testing.csv
-      - predicted_tweets.csv
+#### main / twitter_data /
+- Twitter_main_final_fixed.csv
+- Twitter_pertubation_testing.csv
+- predicted_tweets.csv
 
-#### Code & Data /
-  - array_data /
-    - y_train_array.npy
-    - y_valid_array.npy
-    - y_test_array.npy
+#### main / array_data /
+- y_train_array.npy
+- y_valid_array.npy
+- y_test_array.npy
 
-#### Code & Data /
-  - _maincall_embeddings: n = 57 mini-batches of compressed pickle files containing word embeddings, {n}_embeddings_main_call.pbz2
+#### Code & Data / _maincall_embeddings
+- n = 57 mini-batches of compressed pickle files containing word embeddings, {n}_embeddings_main_call.pbz2
 
 ## Necessary Packages and Dependencies
 
@@ -53,7 +51,7 @@ sklearn.feature_extraction.text, sklearn.feature_selection, scipy.stats
 sklearn.feature_selection, tensorflow.keras.preprocessing.sequence,
 kernelapp (from ipykernel), json, pydot, pickle, datetime, random, math, itertools,
 requests, AutoTokenizer + AutoModelForMaskedLM (from transformers), nltk.corpus
-(stopwords),
+(stopwords)
 
 * The word embeddings that are fed into the CNN were obtained through the
   Huggingface Inference API with the G-BERT base model developed by deepsetAI.
