@@ -1,2 +1,8 @@
 /predicted_Tweets_MAIN.csv
-/twitter_data
+/twitter_data/230103_Twitter_manual_coding_finished.csv
+/twitter_data/Twitter_Keyword_Selec_final.csv
+/twitter_data/Twitter_main_final_fixed.csv
+/twitter_data/Twitter_main_final_ORIGINAL.csv
+/inputs_test_embeddings.pbz2
+/inputs_train_embeddings.pbz2
+/inputs_valid_embeddings.pbz2
