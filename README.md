@@ -1,4 +1,4 @@
-#### README-file for Bachelor's thesis: Luca Zug (Matrikelnummer: 03729671)
+#### README-file for Bachelor's thesis: Luca Zug (Matrikelnummer: *****671)
 
 # Files and Folders
 
@@ -60,7 +60,7 @@ requests
 * The word embeddings that are fed into the CNN were obtained through the
   Huggingface Inference API with the G-BERT base model developed by deepsetAI.
   The API tokens are not included in the above files. The actual word embeddings
-  are save in pickle files for the training, validation and test set, respectively.
+  are saved in pickle files for the training, validation and test set, respectively.
 
 ## Notes
 

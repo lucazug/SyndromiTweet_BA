@@ -27,7 +27,7 @@ tweet_query = symptomlist[0] + ' -has:media'
 print(tweet_query)
 
 # Initialise a Twitter API client using a bearer token
-#bearer_token = ## HIDDEN ##
+#bearer_token = ## REMOVED ##
 client = twp.Client(bearer_token=bearer_token, wait_on_rate_limit=True)
 
 # Generate a list of 50 dates with random times of day as start and end times for the API calls.

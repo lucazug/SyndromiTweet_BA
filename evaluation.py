@@ -26,21 +26,21 @@ import datetime
 rki_data = pd.read_csv("Influenza_RKI.csv", sep=";")
 
 # Data from predictions from model
-model_data = pd.read_csv('predicted_Tweets_MAIN.csv', dtype={'Predicted Values':'float',
+model_data = pd.read_csv('predicted_Tweets_MAIN.csv', dtype={'Predicted Values': 'float',
                                                              'author_id': 'str',
                                                              'username': 'str',
                                                              'author_followers': 'int',
-                                                             'author_location':'str',
-                                                             'text':'str',
+                                                             'author_location': 'str',
+                                                             'text': 'str',
                                                              'created_at': 'str',
-                                                             'tweet_location':'str'})
+                                                             'tweet_location': 'str'})
 print(model_data.head())
 
 # Preprocessing the manually copied RKI data by dropping unneccessary data points, transposing to plot easily and
 # shortening the the calendar weeks from the ftormat 'YYYY-WW' to 'WW'.
 influenza_rki = rki_data.iloc[[0]]
 influenza_rki = influenza_rki.drop(['Unnamed: 0', "2018-47", "2018-48", "2018-49",  "2018-50",  "2018-51",  "2018-52"],
-                                   axis= 1)
+                                   axis=1)
 temp_influ = influenza_rki
 influenza_rki = influenza_rki.transpose()
 influenza_rki['calweek'] = temp_influ.columns
@@ -191,7 +191,8 @@ plt.show()
 norm_applied_rki = funcs.normalise(applied_rki, "pred count", "rki count")
 print(norm_applied_rki)
 
-## Correlation analysis
+# Correlation Analysis for Model Output
+
 # Print the correlation between the predicted counts and the RKI counts
 print('Correlation between Predictions for Weeks and RKI Data')
 print(applied_rki['pred count'].corr(applied_rki['rki count']).round(3))

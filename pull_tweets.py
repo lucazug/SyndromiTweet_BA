@@ -25,7 +25,7 @@ tweet_query = querylist[0] + ' -is:retweet -has:media'
 print(tweet_query)
 
 # Define bearer token and tweepy client with wait on rate limit to prevent timeouts
-#bearer_token = ## HIDDEN ##
+#bearer_token =  ## **REMOVED** ##
 client = twp.Client(bearer_token=bearer_token, wait_on_rate_limit=True)
 
 ili_tweets = []

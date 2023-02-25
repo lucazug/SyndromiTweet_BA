@@ -163,7 +163,7 @@ def word_freq(string, baselist):
     for i in wordlist:
         for word in baselist:
             if word in i:
-                baselist[word,"freq"] +=1
+                baselist[word, "freq"] += 1
     # Return updated baselist
     return baselist
 
