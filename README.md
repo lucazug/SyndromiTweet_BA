@@ -14,7 +14,7 @@
   - nlp_prediction_bert.py (Predict main Twitter data from pretrained model.)
   - evaluation.py (Evaluate predictions for tweets and correlate with official data sources.)
 
-## Data
+## Data in GitHub Repo
 
 #### main /
   - Symptome.csv (List of symptoms used in keyword_selec.py)
@@ -22,22 +22,27 @@
   - Significant_Keywords.csv (List of keywords for Twitter search query out of keyword_selec_model.py into pull_tweets.py)
   - Significant_Foundwords.csv (List of keywords for Twitter search query out of keyword_selec_model.py into pull_tweets.py)
 
-  - inputs_train_embeddings.pbz2    ** Word embeddings for training data
-  - inputs_valid_embeddings.pbz2    ** Word embeddings for validation data
-  - inputs_test_embeddings.pbz2     ** Word embeddings for test data
-
-#### main / twitter_data /
-- Twitter_main_final_fixed.csv
-- Twitter_pertubation_testing.csv
-- predicted_tweets.csv
-
 #### main / array_data /
 - y_train_array.npy
 - y_valid_array.npy
 - y_test_array.npy
 
-#### Code & Data / _maincall_embeddings
+## Data in Cloud Storage
+
+### Data_SyndromiTweet /
+ - inputs_train_embeddings.pbz2 (Word embeddings for training data)
+ - inputs_valid_embeddings.pbz2 (Word embeddings for validation data)
+ - inputs_test_embeddings.pbz2   (Word embeddings for test data)
+ - lostpredict.json (JSON-file with list of tweets that caused errors during embeddings retrieval)
+ - predicted_tweets_MAIN.csv (Table of tweet predictions returned by the model)
+
+#### Data_SyndromiTweet / _maincall_embeddings
 - n = 57 mini-batches of compressed pickle files containing word embeddings, {n}_embeddings_main_call.pbz2
+
+#### Data_SyndromiTweet / twitter_data /
+- Twitter_main_final_fixed.csv (Main dataset)
+- 230103_Twitter_manual_coding_finished.csv (Model training input data)
+- Twitter_Keyword_Selec_final.csv (Keyword selection input data)
 
 ## Necessary Packages and Dependencies
 
@@ -50,8 +55,7 @@ sklearn.preprocessing, sklearn.model_selection, sklearn.metrics, sklearn.utils,
 sklearn.feature_extraction.text, sklearn.feature_selection, scipy.stats
 sklearn.feature_selection, tensorflow.keras.preprocessing.sequence,
 kernelapp (from ipykernel), json, pydot, pickle, datetime, random, math, itertools,
-requests, AutoTokenizer + AutoModelForMaskedLM (from transformers), nltk.corpus
-(stopwords)
+requests
 
 * The word embeddings that are fed into the CNN were obtained through the
   Huggingface Inference API with the G-BERT base model developed by deepsetAI.
